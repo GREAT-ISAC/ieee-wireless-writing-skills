@@ -1,0 +1,110 @@
+name: ieee-wireless-writing
+version: 0.1.0
+description: >
+  Declarative router for IEEE wireless communications writing. SKILL.md uses
+  this file to decide which fragments to load for a drafting, polishing,
+  auditing, scaffolding, literature, experiment, or rebuttal task.
+
+always_load:
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/output-format.md
+
+axes:
+  mode:
+    detect: >
+      Identify the job type. Prefer the user's explicit verb. Use draft for
+      new prose, polish for existing prose, audit for critique, scaffold for a
+      project skeleton, literature-direction for paper reading or idea
+      selection, experiment-plan for baselines/metrics/figures, and
+      reviewer-response for rebuttal or revision letters.
+    values:
+      draft: static/fragments/mode/draft.md
+      polish: static/fragments/mode/polish.md
+      audit: static/fragments/mode/audit.md
+      scaffold: static/fragments/mode/scaffold.md
+      literature-direction: static/fragments/mode/literature-direction.md
+      experiment-plan: static/fragments/mode/experiment-plan.md
+      reviewer-response: static/fragments/mode/reviewer-response.md
+    default: draft
+    multi: false
+
+  venue:
+    detect: >
+      Use the named IEEE venue. If the user says only IEEE journal, use
+      generic. Treat TWC, TVT, WCL, JSAC, TCOM, IoTJ, ICC, and GLOBECOM as
+      venue values when mentioned.
+    values:
+      generic: static/fragments/venue/generic.md
+      twc: static/fragments/venue/twc.md
+      tvt: static/fragments/venue/tvt.md
+      wcl: static/fragments/venue/wcl.md
+      jsac: static/fragments/venue/jsac.md
+      tcom: static/fragments/venue/tcom.md
+      iotj: static/fragments/venue/iotj.md
+      conference: static/fragments/venue/conference.md
+    default: generic
+    multi: false
+
+  area:
+    detect: >
+      Identify the wireless subarea from terms in the request, title, abstract,
+      code, figures, or notes. Multiple areas are allowed when the paper spans
+      topics.
+    values:
+      csi: static/fragments/area/csi.md
+      channel-estimation: static/fragments/area/channel-estimation.md
+      mimo-beamforming: static/fragments/area/mimo-beamforming.md
+      ofdm: static/fragments/area/ofdm.md
+      ris: static/fragments/area/ris.md
+      isac: static/fragments/area/isac.md
+      mmwave-thz: static/fragments/area/mmwave-thz.md
+      wifi-sensing: static/fragments/area/wifi-sensing.md
+      radio-ml: static/fragments/area/radio-ml.md
+      networks: static/fragments/area/networks.md
+    default: csi
+    multi: true
+
+  section:
+    detect: >
+      Identify the manuscript section or sections. Skip this axis only for a
+      whole-paper audit, project scaffold, or reviewer response with no section
+      target.
+    values:
+      title: static/fragments/section/title.md
+      abstract: static/fragments/section/abstract.md
+      introduction: static/fragments/section/introduction.md
+      related-work: static/fragments/section/related-work.md
+      system-model: static/fragments/section/system-model.md
+      method: static/fragments/section/method.md
+      experiments: static/fragments/section/experiments.md
+      discussion: static/fragments/section/discussion.md
+      conclusion: static/fragments/section/conclusion.md
+    default: abstract
+    multi: true
+
+  language:
+    detect: >
+      Detect the source language and interference pattern. Use zh-to-en for
+      Chinese notes, mixed Chinese-English drafts, or English that preserves
+      Chinese clause order. Otherwise use en.
+    values:
+      en: static/fragments/language/en.md
+      zh-to-en: static/fragments/language/zh-to-en.md
+    default: en
+    multi: false
+
+references:
+  on_demand:
+    - condition: claim strength, unsupported novelty, contribution audit, or final self-review
+      path: references/claim-evidence.md
+    - condition: literature reading, gap extraction, related-work synthesis, or direction ranking
+      path: references/literature-direction.md
+    - condition: experiment design, baseline selection, ablation planning, channel conditions, or result figures
+      path: references/wireless-experiments.md
+    - condition: IEEEtran scaffold, LaTeX structure, figures, tables, or PDF build issues
+      path: references/ieee-latex.md
+    - condition: reviewer comments, rebuttal letters, revision plans, or point-by-point responses
+      path: references/reviewer-response.md
+    - condition: acronym, notation, channel-model, CSI, OFDM, MIMO, RIS, ISAC, or metric consistency
+      path: references/terminology.md
