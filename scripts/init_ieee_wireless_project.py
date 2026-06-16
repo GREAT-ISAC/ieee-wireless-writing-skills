@@ -40,8 +40,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output_dir", help="Workspace directory to create")
     parser.add_argument("--title", default="Working Title for IEEE Wireless Submission")
-    parser.add_argument("--venue", default="generic", help="generic, twc, tvt, wcl, jsac, tcom, iotj, conference")
-    parser.add_argument("--area", default="csi", help="Primary area, e.g. csi, isac, ris, channel-estimation")
+    parser.add_argument("--venue", default="generic", help="generic, twc, tvt, wcl, jsac, tcom, iotj, iwcm, conference")
+    parser.add_argument(
+        "--area",
+        default="csi",
+        help="Primary area, e.g. csi, isac, ris, channel-estimation, ai-wireless, foundation-models, wireless-datasets",
+    )
     parser.add_argument("--author", default="Author Name")
     parser.add_argument("--sim-lang", choices=["python", "matlab", "none"], default="python")
     args = parser.parse_args()

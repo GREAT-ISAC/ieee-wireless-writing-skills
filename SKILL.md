@@ -1,6 +1,6 @@
 ---
 name: ieee-wireless-writing
-description: Draft, restructure, polish, audit, or scaffold IEEE-style wireless communications manuscripts and reviewer responses. Use for IEEE TWC, TVT, WCL, JSAC, TCOM, IoTJ, ICC, GLOBECOM, and work involving CSI, OFDM, MIMO, channel estimation, beamforming, RIS, ISAC, mmWave, THz, WiFi sensing, radio ML, network optimization, IEEEtran LaTeX, literature-gap mapping, claim-evidence audits, experiments, rebuttals, or Chinese-to-English wireless paper writing.
+description: Draft, restructure, polish, audit, or scaffold IEEE-style wireless communications manuscripts, magazine articles, and reviewer responses. Use for IEEE TWC, TVT, WCL, JSAC, TCOM, IoTJ, IEEE Wireless Communications, ICC, GLOBECOM, and work involving CSI, OFDM, MIMO, channel estimation, beamforming, RIS, ISAC, mmWave, THz, WiFi sensing, radio ML, AI+wireless, foundation models, wireless datasets, network optimization, IEEEtran LaTeX, literature-gap mapping, claim-evidence audits, experiments, rebuttals, or Chinese-to-English wireless paper writing.
 ---
 
 # IEEE Wireless Writing
@@ -49,6 +49,7 @@ Follow the core workflow unless the user asks only for a small local edit:
 - [references/claim-evidence.md](references/claim-evidence.md): Claim audit and evidence matrix.
 - [references/literature-direction.md](references/literature-direction.md): Paper reading, gap extraction, and direction ranking.
 - [references/wireless-experiments.md](references/wireless-experiments.md): Baseline, metric, ablation, and channel-condition rules.
+- [references/ai-wireless-evidence.md](references/ai-wireless-evidence.md): AI+wireless, foundation-model, and dataset evidence rules.
 - [references/ieee-latex.md](references/ieee-latex.md): IEEEtran project and build guidance.
 - [references/reviewer-response.md](references/reviewer-response.md): Point-by-point response workflow.
 - [references/terminology.md](references/terminology.md): Wireless terminology and notation guardrails.

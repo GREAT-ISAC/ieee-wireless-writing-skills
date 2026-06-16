@@ -1,9 +1,10 @@
 name: ieee-wireless-writing
-version: 0.1.0
+version: 0.2.0
 description: >
   Declarative router for IEEE wireless communications writing. SKILL.md uses
   this file to decide which fragments to load for a drafting, polishing,
-  auditing, scaffolding, literature, experiment, or rebuttal task.
+  auditing, scaffolding, literature, experiment, magazine, AI+wireless,
+  foundation-model, dataset, or rebuttal task.
 
 always_load:
   - static/core/stance.md
@@ -32,8 +33,8 @@ axes:
   venue:
     detect: >
       Use the named IEEE venue. If the user says only IEEE journal, use
-      generic. Treat TWC, TVT, WCL, JSAC, TCOM, IoTJ, ICC, and GLOBECOM as
-      venue values when mentioned.
+      generic. Treat TWC, TVT, WCL, JSAC, TCOM, IoTJ, IEEE Wireless
+      Communications, ICC, and GLOBECOM as venue values when mentioned.
     values:
       generic: static/fragments/venue/generic.md
       twc: static/fragments/venue/twc.md
@@ -42,6 +43,7 @@ axes:
       jsac: static/fragments/venue/jsac.md
       tcom: static/fragments/venue/tcom.md
       iotj: static/fragments/venue/iotj.md
+      iwcm: static/fragments/venue/iwcm.md
       conference: static/fragments/venue/conference.md
     default: generic
     multi: false
@@ -49,8 +51,8 @@ axes:
   area:
     detect: >
       Identify the wireless subarea from terms in the request, title, abstract,
-      code, figures, or notes. Multiple areas are allowed when the paper spans
-      topics.
+      code, figures, data cards, model cards, or notes. Multiple areas are
+      allowed when the paper spans topics.
     values:
       csi: static/fragments/area/csi.md
       channel-estimation: static/fragments/area/channel-estimation.md
@@ -61,6 +63,9 @@ axes:
       mmwave-thz: static/fragments/area/mmwave-thz.md
       wifi-sensing: static/fragments/area/wifi-sensing.md
       radio-ml: static/fragments/area/radio-ml.md
+      ai-wireless: static/fragments/area/ai-wireless.md
+      foundation-models: static/fragments/area/foundation-models.md
+      wireless-datasets: static/fragments/area/wireless-datasets.md
       networks: static/fragments/area/networks.md
     default: csi
     multi: true
@@ -102,6 +107,8 @@ references:
       path: references/literature-direction.md
     - condition: experiment design, baseline selection, ablation planning, channel conditions, or result figures
       path: references/wireless-experiments.md
+    - condition: AI+wireless, foundation models, pretrained models, wireless datasets, benchmark claims, data cards, model cards, or dataset leakage
+      path: references/ai-wireless-evidence.md
     - condition: IEEEtran scaffold, LaTeX structure, figures, tables, or PDF build issues
       path: references/ieee-latex.md
     - condition: reviewer comments, rebuttal letters, revision plans, or point-by-point responses

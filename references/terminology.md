@@ -15,6 +15,8 @@ Define acronyms at first use:
 - SINR: signal-to-interference-plus-noise ratio.
 - NMSE: normalized mean square error.
 - BER/BLER: bit/block error rate.
+- FM: foundation model, but avoid the acronym unless the manuscript defines it clearly.
+- AI-native wireless: use only when AI changes architecture, operation, or control logic, not when a standard model is merely applied offline.
 
 ## Notation Checks
 
@@ -33,3 +35,5 @@ Use with evidence:
 - `scalable`: complexity or large-system evidence.
 - `generalizable`: cross-domain or theoretical support.
 - `low-overhead`: pilot/feedback/control cost comparison.
+- `foundation model`: pretraining scale, reusable representations, and transfer/adaptation evidence.
+- `large-scale dataset`: sample count, diversity dimensions, metadata, and benchmark scope.

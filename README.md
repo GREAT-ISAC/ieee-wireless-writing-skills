@@ -1,6 +1,6 @@
 # IEEE Wireless Writing Skill
 
-`ieee-wireless-writing` is a Codex skill for drafting, polishing, auditing, and scaffolding IEEE-style wireless communications manuscripts. It is designed for papers targeting venues such as IEEE TWC, TVT, WCL, JSAC, TCOM, IoTJ, ICC, and GLOBECOM, with domain support for CSI, OFDM, MIMO, channel estimation, beamforming, RIS, ISAC, mmWave/THz, WiFi sensing, radio ML, and wireless networking.
+`ieee-wireless-writing` is a Codex skill for drafting, polishing, auditing, and scaffolding IEEE-style wireless communications manuscripts and magazine articles. It is designed for papers targeting venues such as IEEE TWC, TVT, WCL, JSAC, TCOM, IoTJ, IEEE Wireless Communications, ICC, and GLOBECOM, with domain support for CSI, OFDM, MIMO, channel estimation, beamforming, RIS, ISAC, mmWave/THz, WiFi sensing, radio ML, AI+wireless, wireless foundation models, wireless datasets, and wireless networking.
 
 The skill emphasizes evidence-bound writing: it helps convert ideas, notes, experiments, reviewer comments, and partial LaTeX drafts into IEEE-style technical prose while avoiding unsupported claims, fake citations, hidden assumptions, and over-broad novelty statements.
 
@@ -17,10 +17,10 @@ This repository adapts those ideas specifically to IEEE wireless communications 
 
 Use this skill when you need help with:
 
-- Drafting IEEE-style abstracts, introductions, related work, system models, methods, experiment sections, conclusions, and reviewer responses.
+- Drafting IEEE-style abstracts, introductions, related work, system models, methods, experiment sections, magazine articles, conclusions, and reviewer responses.
 - Polishing Chinese-influenced English into concise IEEE technical English.
 - Auditing contribution bullets, novelty claims, baselines, notation, and experiment evidence.
-- Designing wireless communication experiments with fair baselines, metrics, ablations, and channel conditions.
+- Designing wireless communication experiments with fair baselines, metrics, ablations, channel conditions, dataset splits, and AI/foundation-model evidence.
 - Creating an IEEEtran manuscript workspace with paper, notes, references, and experiment scaffolding.
 - Preparing point-by-point reviewer responses without fabricating line numbers, experiments, or citations.
 
@@ -81,6 +81,10 @@ Use $ieee-wireless-writing to create a reviewer-response plan from these IEEE TW
 Use $ieee-wireless-writing to scaffold a new IEEEtran paper workspace for a RIS-assisted ISAC manuscript.
 ```
 
+```text
+Use $ieee-wireless-writing to outline an IEEE Wireless Communications magazine article on foundation models for wireless networks, with taxonomy, deployment challenges, and open research directions.
+```
+
 ## Routing Model
 
 The skill uses a manifest-driven router:
@@ -96,8 +100,8 @@ The routing axes are:
 | Axis | Purpose | Examples |
 | --- | --- | --- |
 | `mode` | The user task type | `draft`, `polish`, `audit`, `scaffold`, `literature-direction`, `experiment-plan`, `reviewer-response` |
-| `venue` | Target IEEE venue | `twc`, `tvt`, `wcl`, `jsac`, `tcom`, `iotj`, `conference`, `generic` |
-| `area` | Wireless subarea | `csi`, `ofdm`, `channel-estimation`, `mimo-beamforming`, `ris`, `isac`, `mmwave-thz`, `wifi-sensing`, `radio-ml`, `networks` |
+| `venue` | Target IEEE venue | `twc`, `tvt`, `wcl`, `jsac`, `tcom`, `iotj`, `iwcm`, `conference`, `generic` |
+| `area` | Wireless subarea | `csi`, `ofdm`, `channel-estimation`, `mimo-beamforming`, `ris`, `isac`, `mmwave-thz`, `wifi-sensing`, `radio-ml`, `ai-wireless`, `foundation-models`, `wireless-datasets`, `networks` |
 | `section` | Manuscript section | `title`, `abstract`, `introduction`, `related-work`, `system-model`, `method`, `experiments`, `discussion`, `conclusion` |
 | `language` | Language/writing pattern | `en`, `zh-to-en` |
 
@@ -124,6 +128,7 @@ This keeps the main skill concise while allowing domain-specific behavior.
 │       └── venue/
 ├── references/
 │   ├── claim-evidence.md
+│   ├── ai-wireless-evidence.md
 │   ├── ieee-latex.md
 │   ├── literature-direction.md
 │   ├── reviewer-response.md
@@ -264,6 +269,34 @@ Expected behavior:
 - Draft respectful, technical responses.
 - Mark missing line numbers, unfinished experiments, or unverifiable changes as `AUTHOR_INPUT_NEEDED`.
 
+### 6. Plan a Magazine Article
+
+Use:
+
+```text
+Use $ieee-wireless-writing to draft an IEEE Wireless Communications magazine outline on AI-native wireless networks and foundation models.
+```
+
+Expected behavior:
+
+- Detect `venue=iwcm` and use magazine-style writing instead of Transactions-style derivation.
+- Emphasize tutorial structure, taxonomy, architecture diagrams, deployment issues, standardization/policy implications, and open challenges.
+- Avoid presenting a narrow algorithm paper as a magazine article without broader insight.
+
+### 7. Audit an AI+Wireless Dataset or Foundation-Model Paper
+
+Use:
+
+```text
+Use $ieee-wireless-writing to audit this wireless foundation-model paper. Focus on dataset claims, transfer evidence, baselines, and leakage risks.
+```
+
+Expected behavior:
+
+- Check whether "foundation model" is supported by pretraining scale, transfer, and adaptation evidence.
+- Check dataset metadata, official splits, leakage controls, and benchmark reproducibility.
+- Separate architecture gains from pretraining/data gains.
+
 ## Supported Venues
 
 | Venue | Focus |
@@ -275,6 +308,7 @@ Expected behavior:
 | JSAC | Special-issue fit, system-level significance |
 | TCOM | Communication-theoretic rigor, signal model, derivation |
 | IoTJ | IoT constraints, scalability, energy, edge/device limitations |
+| IEEE Wireless Communications | Magazine-style tutorial insight, taxonomy, systems perspective, deployment and policy/standardization context |
 | Conference | Crisp problem, compact evidence, direct contribution |
 
 ## Supported Wireless Areas
@@ -290,6 +324,9 @@ Expected behavior:
 | mmWave/THz | Blockage, beam training, near-field, hardware impairments |
 | WiFi sensing | Device/session/user/location splits, leakage control |
 | Radio ML | Input representation, baselines, latency, domain shift |
+| AI+wireless | AI role, wireless necessity, deployment inputs, overhead, classical and neural baselines |
+| Foundation models | Radio modality, pretraining objective, transfer protocol, adaptation method, scale evidence |
+| Wireless datasets | Data card, collection setup, split policy, leakage checks, benchmark tasks |
 | Networks | Traffic, topology, scheduling, scalability, fairness |
 
 ## Extending the Skill
