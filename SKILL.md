@@ -1,6 +1,6 @@
 ---
 name: ieee-wireless-writing
-description: Draft, restructure, polish, audit, or scaffold IEEE-style wireless communications manuscripts, magazine articles, and reviewer responses. Use for IEEE TWC, TVT, WCL, JSAC, TCOM, IoTJ, IEEE Wireless Communications, ICC, GLOBECOM, and work involving CSI, OFDM, MIMO, channel estimation, beamforming, RIS, ISAC, mmWave, THz, WiFi sensing, radio ML, AI+wireless, foundation models, wireless datasets, network optimization, IEEEtran LaTeX, literature-gap mapping, claim-evidence audits, experiments, rebuttals, or Chinese-to-English wireless paper writing.
+description: Draft, restructure, polish, audit, or scaffold IEEE-style wireless communications manuscripts, magazine articles, and reviewer responses. Use for IEEE TWC, TVT, WCL, JSAC, TCOM, IoTJ, IEEE Wireless Communications, ICC, GLOBECOM, and work involving CSI, OFDM, MIMO, channel estimation, beamforming, RIS, ISAC, mmWave, THz, WiFi sensing, radio ML, AI+wireless, foundation models, wireless datasets, network optimization, IEEEtran LaTeX, literature-gap mapping, innovation ideation, claim-evidence audits, experiment-gap audits, rebuttals, or Chinese-to-English wireless paper writing.
 ---
 
 # IEEE Wireless Writing
@@ -27,7 +27,7 @@ Follow the core workflow unless the user asks only for a small local edit:
 3. Separate evidence types: proven analysis, simulation/measurement observation, dataset fact, implementation detail, and hypothesis.
 4. For literature or direction tasks, read [references/literature-direction.md](references/literature-direction.md).
 5. For drafting or restructuring, load the relevant section fragment and write around problem, gap, method, evidence, and boundary.
-6. For experiment planning or result sections, read [references/wireless-experiments.md](references/wireless-experiments.md).
+6. For experiment-gap audits or result sections, read [references/wireless-experiments.md](references/wireless-experiments.md). List missing evidence, reviewer risks, and claim boundaries; design full experiment protocols only when explicitly requested.
 7. For venue-sensitive work, apply the venue fragment after section logic and before sentence polish.
 8. For LaTeX project setup, run `scripts/init_ieee_wireless_project.py` and then use [references/ieee-latex.md](references/ieee-latex.md).
 9. For reviewer responses, load `static/fragments/mode/reviewer-response.md` and [references/reviewer-response.md](references/reviewer-response.md).
@@ -40,6 +40,7 @@ Follow the core workflow unless the user asks only for a small local edit:
 - Keep related work analytical: group by technical limitation and direct competitor, not by a chronological list of citations.
 - Keep contribution bullets concrete: each bullet must name the method/theory/system delta and its supporting evidence.
 - Preserve mathematical notation and acronym definitions consistently across abstract, body, figures, and tables.
+- For writing, review, experiment-gap, and innovation-ideation tasks, do not edit repository code, launch training/simulation jobs, or change experiment scripts unless the user explicitly asks for implementation. Inspect code, logs, tables, and figures as evidence only, then return manuscript-facing gaps or suggested fixes.
 
 ## Resources
 

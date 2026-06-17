@@ -1,6 +1,6 @@
 # Mode: Literature Direction
 
-Use this mode for reading papers, extracting gaps, and selecting a publishable IEEE wireless direction.
+Use this mode for reading papers, extracting gaps, brainstorming innovation points, and selecting a publishable IEEE wireless direction.
 
 Require a matrix with:
 
@@ -13,3 +13,5 @@ Require a matrix with:
 - Replication target: figure, table, equation, or algorithm.
 
 Propose five directions only after the matrix exists. Reject directions that are only dataset substitution, acronym substitution, or adding a neural module without a wireless reason.
+
+For innovation ideation, include the evidence needed to validate each direction and any missing experiments at a high level, but do not design protocols or edit project code unless explicitly requested.

@@ -17,6 +17,12 @@ For literature or direction tasks:
 
 - Provide a paper-reading matrix or direction-ranking table.
 - Score directions by novelty, execution risk, required evidence, reproducibility, and venue fit.
+- For innovation ideation, include high-level missing evidence without designing experiment protocols.
+
+For experiment-gap audits:
+
+- Return a gap matrix with claim, current evidence, missing experiment/detail, review risk, and minimal manuscript-facing fix.
+- Avoid implementation steps unless explicitly requested.
 
 For reviewer responses:
 

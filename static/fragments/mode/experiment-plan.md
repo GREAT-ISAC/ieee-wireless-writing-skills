@@ -1,6 +1,8 @@
 # Mode: Experiment Plan
 
-Design experiments before writing result claims.
+Use this mode only when the user explicitly asks for experiment design or planning. Otherwise use `experiment-gap-audit`.
+
+Keep planning at the manuscript-evidence level unless implementation is explicitly requested.
 
 Minimum experiment package:
 
@@ -11,4 +13,4 @@ Minimum experiment package:
 - Complexity or latency evidence when claiming practical deployment.
 - Failure cases or boundary tests for robustness claims.
 
-Every planned figure must answer one review question.
+Every planned figure must answer one review question. Do not modify project code, launch simulations, or write training scripts unless the user explicitly asks.

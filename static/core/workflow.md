@@ -6,7 +6,7 @@
 4. Contribution ledger: draft each contribution as `delta + evidence + boundary`.
 5. Literature alignment: map each major claim to direct competitors and foundational references.
 6. Method logic: connect system model, algorithm architecture, training/inference process, and complexity.
-7. Experiment logic: specify baselines, metrics, channel settings, ablations, and stress tests before writing result prose.
+7. Experiment evidence audit: identify missing baselines, metrics, channel settings, ablations, stress tests, and reproducibility details before writing result prose; avoid full protocol design unless explicitly requested.
 8. IEEE prose pass: tighten transitions, define acronyms, unify notation, remove hype, and keep paragraphs single-purpose.
 9. QA pass: check claim-evidence alignment, citation role, notation consistency, figure/table readability, and venue fit.
 

@@ -1,10 +1,10 @@
-# Wireless Experiment Design
+# Wireless Experiment Evidence Audit
 
-Use experiments to prove specific claims.
+Audit whether the available experiments prove the manuscript's specific claims. Prefer missing-evidence analysis over experiment design unless the user explicitly asks for a protocol.
 
 ## Baselines
 
-Select baselines by role:
+Check whether baselines cover these roles:
 
 - Direct competitor: same task and setting.
 - Classical baseline: LS/LMMSE/MMSE, OMP/CS, WMMSE, ZF/MMSE detector, greedy scheduler, convex relaxation, or model-specific heuristic.
@@ -14,7 +14,7 @@ Select baselines by role:
 
 ## Metrics
 
-Choose metrics that match claims:
+Check whether metrics match claims:
 
 - Estimation: NMSE, MSE, downstream BER/BLER, spectral efficiency.
 - Beamforming/resource allocation: sum rate, SINR, outage, fairness, energy efficiency.
@@ -26,7 +26,7 @@ Choose metrics that match claims:
 
 ## Conditions
 
-Report enough detail for reproduction:
+Check whether the manuscript reports enough detail for reproduction:
 
 - SNR/SINR range.
 - Antenna, user, subcarrier, bandwidth, carrier, mobility, channel model.
@@ -38,7 +38,7 @@ Report enough detail for reproduction:
 
 ## Figure Logic
 
-Each figure should answer one question:
+Each existing or missing figure should answer one question:
 
 - Main gain: Does the method beat direct competitors?
 - Ablation: Which module creates the gain?
@@ -47,3 +47,15 @@ Each figure should answer one question:
 - Boundary: Where does it fail?
 - Transfer: Does pretraining help outside the source domain?
 - Leakage: Does performance remain after user/session/location/time leakage controls?
+
+## Gap Output
+
+For experiment-section audits, return a compact matrix:
+
+- Claim.
+- Current evidence.
+- Missing evidence or setting.
+- Review risk.
+- Minimal fix: add evidence, narrow the claim, cite a boundary, or mark `AUTHOR_INPUT_NEEDED`.
+
+Do not prescribe code edits, hyperparameter sweeps, training commands, or simulation scripts unless the user explicitly asks for implementation.

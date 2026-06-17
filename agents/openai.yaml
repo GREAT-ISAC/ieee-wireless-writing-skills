@@ -1,4 +1,4 @@
 interface:
   display_name: "IEEE Wireless Writing"
-  short_description: "IEEE wireless manuscript and magazine workflow"
-  default_prompt: "Use $ieee-wireless-writing to draft and audit my wireless communications manuscript, magazine article, or reviewer response."
+  short_description: "IEEE wireless writing and evidence audits"
+  default_prompt: "Use $ieee-wireless-writing to draft, audit, brainstorm innovation points, or find experiment gaps in my wireless communications manuscript."

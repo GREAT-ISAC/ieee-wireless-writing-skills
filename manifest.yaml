@@ -3,8 +3,8 @@ version: 0.2.0
 description: >
   Declarative router for IEEE wireless communications writing. SKILL.md uses
   this file to decide which fragments to load for a drafting, polishing,
-  auditing, scaffolding, literature, experiment, magazine, AI+wireless,
-  foundation-model, dataset, or rebuttal task.
+  auditing, scaffolding, literature, innovation-ideation, experiment-gap,
+  magazine, AI+wireless, foundation-model, dataset, or rebuttal task.
 
 always_load:
   - static/core/stance.md
@@ -17,14 +17,19 @@ axes:
       Identify the job type. Prefer the user's explicit verb. Use draft for
       new prose, polish for existing prose, audit for critique, scaffold for a
       project skeleton, literature-direction for paper reading or idea
-      selection, experiment-plan for baselines/metrics/figures, and
-      reviewer-response for rebuttal or revision letters.
+      selection, innovation brainstorming, or publishable-direction ranking,
+      experiment-gap-audit for missing experiments, result-section evidence
+      gaps, baselines/metrics/ablation sufficiency, or reviewer-facing
+      experiment critique, experiment-plan only when the user explicitly asks
+      to design an experiment protocol, and reviewer-response for rebuttal or
+      revision letters.
     values:
       draft: static/fragments/mode/draft.md
       polish: static/fragments/mode/polish.md
       audit: static/fragments/mode/audit.md
       scaffold: static/fragments/mode/scaffold.md
       literature-direction: static/fragments/mode/literature-direction.md
+      experiment-gap-audit: static/fragments/mode/experiment-gap-audit.md
       experiment-plan: static/fragments/mode/experiment-plan.md
       reviewer-response: static/fragments/mode/reviewer-response.md
     default: draft
@@ -105,7 +110,7 @@ references:
       path: references/claim-evidence.md
     - condition: literature reading, gap extraction, related-work synthesis, or direction ranking
       path: references/literature-direction.md
-    - condition: experiment design, baseline selection, ablation planning, channel conditions, or result figures
+    - condition: experiment-gap audit, missing baselines or metrics, ablation sufficiency, channel-condition coverage, reproducibility details, result-section critique, or explicit experiment protocol design
       path: references/wireless-experiments.md
     - condition: AI+wireless, foundation models, pretrained models, wireless datasets, benchmark claims, data cards, model cards, or dataset leakage
       path: references/ai-wireless-evidence.md
